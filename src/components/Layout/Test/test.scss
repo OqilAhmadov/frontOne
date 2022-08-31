@@ -1,0 +1,21 @@
+.test {
+	background: #6BD398;
+	padding: 5px 0;
+
+	.container {
+    margin: 0 auto;
+		display: flex;
+    justify-content: center;
+		text-align: center;
+	}
+
+	&__title {
+    margin: 0;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;
+		color: #000000;
+	}
+}

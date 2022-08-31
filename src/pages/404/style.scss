@@ -1,0 +1,114 @@
+.not-found {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    margin-top: 150px;
+
+    .img-box {
+        position: relative;
+        width: 700px;
+
+        .back-image {
+            width: 100%;
+        }
+
+        .znak {
+            position: absolute;
+            bottom: 8px;
+            left: 35%;
+            animation: znak 1s cubic-bezier(1, 0.52, 0.64, 0.85);
+            max-width: 240px;
+            width: 100%;
+        }
+
+        .znak-left {
+            position: absolute;
+            bottom: 10px;
+            left: 32%;
+            animation: znak-left 1s cubic-bezier(0.2, 0.91, 0.35, 0.89);
+            max-width: 100px;
+            width: 100%;
+        }
+    }
+
+    .title {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: #727785;
+        margin-top: 40px;
+    }
+
+    .go-home-btn {
+        background: #08381d;
+        border-radius: 2px;
+        border: 1px solid #08381d;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        padding: 5px 24px;
+        color: #ffffff;
+        margin-top: 20px;
+        text-decoration: none;
+        transition: 0.5s all ease-in;
+
+        &:hover {
+            background: #ffffff;
+            color: #323232;
+            font-weight: 500;
+            transition: 0.5s ease-in-out all;
+        }
+    }
+}
+
+@mixin media($mw: 1024px) {
+    @media screen and (max-width: $mw) {
+        @content;
+    }
+}
+
+@include media(760px) {
+    .not-found {
+        .img-box {
+            width: 100% !important;
+        }
+    }
+}
+
+@keyframes znak {
+    0% {
+        transform: rotate(70deg);
+        transform-origin: bottom;
+    }
+
+    70% {
+        transform: rotate(-20deg);
+        transform-origin: bottom;
+    }
+
+    85% {
+        transform: rotate(10deg);
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes znak-left {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 30%;
+    }
+}

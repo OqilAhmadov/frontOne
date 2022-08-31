@@ -1,0 +1,9 @@
+.form-group {
+	position: relative;
+
+	&__error {
+		position: absolute;
+		color: red;
+		top: 105%;
+	}
+}
